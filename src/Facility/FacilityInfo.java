@@ -5,6 +5,7 @@ public class FacilityInfo implements Facility {
 	public int FacilityID;
 	public String Name;
 	
+	
 	public void setFacilityInfo(String Name, String Address, int id) {
 		this.Address = Address;
 		this.FacilityID = id;
@@ -14,4 +15,5 @@ public class FacilityInfo implements Facility {
 	public FacilityInfo getFacilityInfo() {
 		return this;
 	}
+	
 }

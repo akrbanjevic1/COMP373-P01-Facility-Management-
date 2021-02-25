@@ -7,5 +7,4 @@ public interface Facility {
 	
 	//Getters are going to be here.
 	public FacilityInfo getFacilityInfo();
-	
 }
