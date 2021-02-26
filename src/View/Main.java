@@ -13,17 +13,21 @@ public class Main {
 		// TODO Auto-generated method stub
 		FacilityInfo TestFacility = new FacilityInfo();
 		TestFacility.setFacilityInfo("Atwood Apartments", "123 Apple Ave Illinois", 01);
+		TestFacility.getFacilityInfo();
+		int testFacID = TestFacility.getFacilityID();
+		String testFacName = TestFacility.getFacilityName();
 		
 		//Testing the adding of facility to group and removal of facility
 		FacilityGroup TestGroup = new FacilityGroup(01);
-		TestGroup.addNewFacility(TestFacility);
+		int TestGroupID = TestGroup.getGroupID();
+		TestGroup.addNewFacility(testFacID, testFacName);
 		TestGroup.listFacilities();
-		TestGroup.removeFacility(TestFacility);
+		TestGroup.removeFacility(testFacID);
 		TestGroup.listFacilities();
 		
 		//Testing Manager of FacilityGroup features
 		FacilityManager TestManager = new FacilityManager("John Smith", "456 Pear Boulevard", 1335);
-		TestManager.assignGroup(TestGroup);
+		TestManager.assignGroup(TestGroupID);
 		TestManager.showAssignedGroup();
 		TestManager.removeGroup(); //testing to see if the manager had their assigned group removed here.
 		TestManager.showAssignedGroup();

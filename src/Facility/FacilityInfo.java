@@ -1,9 +1,9 @@
 package Facility;
 
 public class FacilityInfo implements Facility {
-	public String Address;
-	public int FacilityID;
-	public String Name;
+	private String Address;
+	private int FacilityID;
+	private String Name;
 	
 	
 	public void setFacilityInfo(String Name, String Address, int id) {
@@ -12,8 +12,20 @@ public class FacilityInfo implements Facility {
 		this.Name = Name;
 	}
 	
-	public FacilityInfo getFacilityInfo() {
-		return this;
+	public String getFacilityAddress() {
+		return this.Address;
 	}
 	
+	public int getFacilityID() {
+		return this.FacilityID;
+	}
+	
+	public String getFacilityName() {
+		return this.Name;
+	}
+	
+	public String getFacilityInfo() {
+		String facilityInfo = ("Address: "+this.Address+" FacilityID: "+this.FacilityID+" Name: "+this.Name);
+		return facilityInfo;
+	}
 }
