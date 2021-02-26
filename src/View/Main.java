@@ -5,6 +5,9 @@ import Facility.FacilityManager;
 import Facility.FacilityGroup;
 import Rent.RentInfo;
 import Rent.Renter;
+import Rent.RentalCosts;
+import Rent.DamageCharge;
+import Rent.RentCharge;
 
 public class Main {
 
@@ -57,6 +60,16 @@ public class Main {
 		testRentInfo.removeRenter(testRenterID);
 		testRentInfo.listActualUsage();
 		testRentInfo.calcUsageRate();
+		
+		System.out.println("-----------------------------------------Testing of Costs starts here---------------------------------------");
+		//Testing rental costs here.
+		RentCharge testRentCharge = new RentCharge(testRenter);
+		testRentCharge.setCosts(1800);
+		testRentCharge.getCosts();
+		
+		DamageCharge testDamageCharge = new DamageCharge(testRenter);
+		testDamageCharge.setCosts(4000);
+		testDamageCharge.getCosts();
 		
 	}
 
