@@ -1,6 +1,5 @@
 package View;
 
-import java.util.*;
 import Facility.FacilityInfo;
 import Facility.FacilityManager;
 import Facility.FacilityGroup;
@@ -12,22 +11,19 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		FacilityInfo TestFacility = new FacilityInfo();
-		TestFacility.setFacilityInfo("Atwood Apartments", "123 Apple Ave Illinois", 01);
+		TestFacility.addFacilityDetail("Atwood Apartments", "123 Apple Ave Illinois", 01);
 		TestFacility.getFacilityInfo();
-		int testFacID = TestFacility.getFacilityID();
-		String testFacName = TestFacility.getFacilityName();
 		
 		//Testing the adding of facility to group and removal of facility
 		FacilityGroup TestGroup = new FacilityGroup(01);
-		int TestGroupID = TestGroup.getGroupID();
-		TestGroup.addNewFacility(testFacID, testFacName);
+		TestGroup.addNewFacility(TestFacility);
 		TestGroup.listFacilities();
-		TestGroup.removeFacility(testFacID);
+		TestGroup.removeFacility(TestFacility);
 		TestGroup.listFacilities();
 		
 		//Testing Manager of FacilityGroup features
 		FacilityManager TestManager = new FacilityManager("John Smith", "456 Pear Boulevard", 1335);
-		TestManager.assignGroup(TestGroupID);
+		TestManager.assignGroup(TestGroup);
 		TestManager.showAssignedGroup();
 		TestManager.removeGroup(); //testing to see if the manager had their assigned group removed here.
 		TestManager.showAssignedGroup();

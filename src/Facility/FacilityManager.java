@@ -1,4 +1,5 @@
 package Facility;
+import Facility.FacilityGroup;
 
 public class FacilityManager {
 	private String ManagerName;
@@ -25,19 +26,34 @@ public class FacilityManager {
 		this.ManagerID = ID;
 	}
 	
+	//Getter methods for individual values
+	public String getManagerName() {
+		return this.ManagerName;
+	}
+	
+	public String getManagerAddress() {
+		return this.getManagerAddress();
+	}
+	
+	public int getManagerID() {
+		return this.getManagerID();
+	}
+	
 	//Method to display the values for the name and address of Manager instance.
 	public void getManagerDetails() {
 		System.out.println("Name: " + this.ManagerName + " ManagerID: "+this.ManagerID+ " Address: " + this.ManagerAddress);
 	}
 	
 	//This method assigns a group to the manager by passing a facilitygroup and then giving the manager it's ID. 
-	public void assignGroup(int FacilityGroupID) {
+	public void assignGroup(FacilityGroup facilityGroup) {
+		int FacilityGroupID = facilityGroup.getGroupID();
+		
 		if (FacilityGroupID != 0) {
 			this.AssignedGroupID = FacilityGroupID;
 		}
 		else {
 			System.out.println("The Group has an ID of 0; please change the ID to something else and try again!");
-		}
+		} 
 	}
 	
 	public void removeGroup() {
@@ -55,5 +71,3 @@ public class FacilityManager {
 	}
 	
 }
-
-

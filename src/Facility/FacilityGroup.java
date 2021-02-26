@@ -1,6 +1,7 @@
 package Facility;
 
 import java.util.HashMap;
+import Facility.FacilityInfo;
 
 public class FacilityGroup {
 	private int GroupID;
@@ -11,16 +12,21 @@ public class FacilityGroup {
 		this.GroupID = GroupID;
 		FacilitiesList = new HashMap<>();
 	}
+	
 	public int getGroupID() {
 		return this.GroupID;
 	}
-	public void addNewFacility(int FacilityID, String FacilityName) {
-		this.FacilitiesList.put(FacilityID,FacilityName);
+	
+	public void addNewFacility(FacilityInfo facilityInfo) {
+		int FacilityInfoID = facilityInfo.getFacilityID();
+		String FacilityName = facilityInfo.getFacilityName();
+		this.FacilitiesList.put(FacilityInfoID,FacilityName);
 		this.GroupCapacity += 1;
 	}
 	
-	public void removeFacility(int FacilityID) {
-		this.FacilitiesList.remove(FacilityID);
+	public void removeFacility(FacilityInfo facilityInfo) {
+		int FacilityInfoID = facilityInfo.getFacilityID();
+		this.FacilitiesList.remove(FacilityInfoID);
 		this.GroupCapacity -= 1;
 	}
 	
