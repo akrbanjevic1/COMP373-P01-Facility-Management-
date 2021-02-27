@@ -31,11 +31,11 @@ public class FacilityGroup {
 	}
 	
 	public void listFacilities() {
-		this.FacilitiesList.forEach((k,v) -> System.out.println("ID = "
-                + k + ", Name of Facility = " + v)); 
+		this.FacilitiesList.forEach((k,v) -> System.out.print("ID = "
+                + k + ", Name of Facility = " + v+"\n")); 
 	}
 	
 	public void requestCapacity() {
-		System.out.println("Current capacity of the group is: " + GroupCapacity);
+		System.out.print("Current capacity of the group is: " + GroupCapacity+"\n");
 	}
 }

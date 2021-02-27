@@ -26,6 +26,7 @@ public class Main {
 		TestGroup.listFacilities();
 		TestGroup.removeFacility(TestFacility);
 		TestGroup.listFacilities();
+		TestGroup.requestCapacity();
 		
 		//Testing Manager of FacilityGroup features
 		FacilityManager TestManager = new FacilityManager("John Smith", "456 Pear Boulevard", 1335);

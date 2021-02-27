@@ -19,7 +19,7 @@ public class DamageCharge extends RentalCosts{
 		// TODO Auto-generated method stub
 		String renterIDString = String.valueOf(this.renter.getRenterID());
 		String damageChargeString = String.valueOf(this.damageCharge);
-		System.out.println("The amount owed in damages for renter with ID of: " + renterIDString + " is: " + damageChargeString);
+		System.out.print("The amount owed in damages for renter with ID of: " + renterIDString + " is: " + damageChargeString+"\n");
 	}
 	
 

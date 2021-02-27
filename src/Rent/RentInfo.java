@@ -72,12 +72,12 @@ public class RentInfo {
 	}
 	
 	public void listActualUsage() {
-		System.out.println("Currently, there are: " + actualUsage + " renters. The maximum is: " + rentMaximum + " renters.");
+		System.out.print("Currently, there are: " + actualUsage + " renters. The maximum is: " + rentMaximum + " renters."+"\n");
 	}
 	
 	public void calcUsageRate() {
 		Double usageRate = (actualUsage / rentMaximum);
-		System.out.println("The actual usage rate is: " + usageRate);
+		System.out.print("The actual usage rate is: " + usageRate+"\n");
 	}
 	
 }

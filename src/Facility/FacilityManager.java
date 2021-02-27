@@ -39,9 +39,13 @@ public class FacilityManager {
 		return this.getManagerID();
 	}
 	
+	public int getAssignedGroupID() {
+		return this.AssignedGroupID;
+	}
+	
 	//Method to display the values for the name and address of Manager instance.
 	public void getManagerDetails() {
-		System.out.println("Name: " + this.ManagerName + " ManagerID: "+this.ManagerID+ " Address: " + this.ManagerAddress);
+		System.out.print("Name: " + this.ManagerName + " ManagerID: "+this.ManagerID+ " Address: " + this.ManagerAddress+"\n");
 	}
 	
 	//This method assigns a group to the manager by passing a facilitygroup and then giving the manager it's ID. 
@@ -63,7 +67,7 @@ public class FacilityManager {
 	public void showAssignedGroup() {
 		if (this.AssignedGroupID != 0) {
 			int FacilityGroupID = this.AssignedGroupID;
-			System.out.println("The assigned Group to this Manager is " + FacilityGroupID);
+			System.out.print("The assigned Group to this Manager is " + FacilityGroupID+"\n");
 		}
 		else {
 			System.out.println("This Manager has a groupID value of 0; meaning they aren't assigned one yet :(");

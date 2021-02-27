@@ -19,7 +19,7 @@ public class RentCharge extends RentalCosts{
 		// TODO Auto-generated method stub
 		String renterIDString = String.valueOf(this.renter.getRenterID());
 		String rentChargeString = String.valueOf(this.rentCharge);
-		System.out.println("The amount owed in rent for renter with ID of: " + renterIDString + " is: " + rentChargeString);
+		System.out.print("The amount owed in rent for renter with ID of: " + renterIDString + " is: " + rentChargeString+"\n");
 	}
 	
 	
