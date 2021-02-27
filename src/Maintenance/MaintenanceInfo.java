@@ -36,7 +36,7 @@ public class MaintenanceInfo {
     }
 
     public void listMaintenance() {
-        this.MaintenanceDescList.forEach((k,v) -> System.out.println("Request ID# " + k + " . Maintenance description: " + v));
+        this.MaintenanceDescList.forEach((k,v) -> System.out.println("Request ID#" + k + " . Maintenance description: " + v));
     }
 
     public void listFacilityProblems() {

@@ -3,6 +3,9 @@ package View;
 import Facility.FacilityInfo;
 import Facility.FacilityManager;
 import Facility.FacilityGroup;
+import Maintenance.InspectionInfo;
+import Maintenance.MaintenanceInfo;
+import Maintenance.MaintenanceReq;
 import Rent.RentInfo;
 import Rent.Renter;
 import Rent.RentalCosts;
@@ -70,7 +73,26 @@ public class Main {
 		DamageCharge testDamageCharge = new DamageCharge(testRenter);
 		testDamageCharge.setCosts(4000);
 		testDamageCharge.getCosts();
-		
+
+		System.out.println("-----------------------------------------Testing of Maintenance package starts here---------------------------------------");
+
+		// Testing maintenance related requests
+		MaintenanceReq testMaintReq = new MaintenanceReq();
+
+		testMaintReq.scheduleMaintenance(1, "04/21/2021", "Fixing broken smoke detectors.");
+		testMaintReq.calcMaintenanceCost(2.3);
+		testMaintReq.performMaintenance(1);
+
+		// Testing inspection related requests
+		InspectionInfo testInspecInfo = new InspectionInfo();
+
+		testInspecInfo.setInspectionInfoID(302);
+		// testInspecInfo.addNewInspection(302, "Village Crossing Location");	Currently not working due to NullPointerException
+
+		testInspecInfo.setInspectionInfoID(313);
+		// testInspecInfo.addNewInspection(313, "Evanston Location");	Currently not working due to NullPointerException
+
+		// testInspecInfo.listInspections();	Currently not working due to NullPointerException
 	}
 
 }
