@@ -87,12 +87,12 @@ public class Main {
 		InspectionInfo testInspecInfo = new InspectionInfo();
 
 		testInspecInfo.setInspectionInfoID(302);
-		// testInspecInfo.addNewInspection(302, "Village Crossing Location");	Currently not working due to NullPointerException
-
+		testInspecInfo.addNewInspection(302, "Village Crossing Location");
+		
 		testInspecInfo.setInspectionInfoID(313);
-		// testInspecInfo.addNewInspection(313, "Evanston Location");	Currently not working due to NullPointerException
+		testInspecInfo.addNewInspection(313, "Evanston Location");
 
-		// testInspecInfo.listInspections();	Currently not working due to NullPointerException
+		testInspecInfo.listInspections();
 	}
 
 }

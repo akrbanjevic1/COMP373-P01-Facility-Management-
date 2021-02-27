@@ -8,6 +8,10 @@ public class InspectionInfo {
     private int InspectionInfoID;
     private HashMap<Integer, String> InspectionsList; // TODO: This needs to be reflected on the UML
 
+    public InspectionInfo() {
+    	this.InspectionsList = new HashMap<Integer, String>();
+    }
+    
     public void setInspectionInfoID(int InfoID) { this.InspectionInfoID = InfoID; }
 
     public int getInspectionInfoID() { return this.InspectionInfoID; }
@@ -15,8 +19,8 @@ public class InspectionInfo {
     // TODO: This needs to be reflected on the UML
     public void addNewInspection(int InfoID, String FacilityName) {
         setInspectionInfoID(InfoID);
-
-        this.InspectionsList.put(InspectionInfoID, FacilityName);
+        
+        this.InspectionsList.put(InfoID, FacilityName);
     }
 
     public void listInspections() {
