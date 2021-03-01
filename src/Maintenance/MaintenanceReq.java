@@ -17,17 +17,19 @@ public class MaintenanceReq {
         setRequestID(ID);
 
         System.out.println("Maintenance request received.\n");
-        System.out.println("Request ID#:" + ID);
+        System.out.println("Request ID#" + ID);
         System.out.println("Scheduled date: " + date);
         System.out.println("Service description: " + description);
     }
 
-    public void calcMaintenanceCost(Double hours) {
+    public Double calcMaintenanceCost(Double hours) {
         setHoursWorked(hours);
 
         Double maintenanceCost = MAINTENANCE_COST * hoursWorked;
 
         System.out.println("Total for this maintenance service: $" + maintenanceCost);
+
+        return maintenanceCost;
     }
 
     public void performMaintenance(int ID) {

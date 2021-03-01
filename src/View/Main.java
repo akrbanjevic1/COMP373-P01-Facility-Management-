@@ -88,7 +88,7 @@ public class Main {
 		InspectionInfo testInspecInfo = new InspectionInfo();
 
 		testInspecInfo.setInspectionInfoID(302);
-		testInspecInfo.addNewInspection(302, "Village Crossing Location");
+		testInspecInfo.addNewInspection(302, "Skokie Location");
 		
 		testInspecInfo.setInspectionInfoID(313);
 		testInspecInfo.addNewInspection(313, "Evanston Location");

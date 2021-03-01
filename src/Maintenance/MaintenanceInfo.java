@@ -26,9 +26,9 @@ public class MaintenanceInfo {
         FacilityProblems.add(description);
     }
 
-    // TODO This ain't it
-    public void calcProblemRateForFacility() {
 
+    public void calcProblemRateForFacility() {
+        System.out.println("This facility has had " + this.FacilityProblems.size() + "problems so far.");
     }
 
     public void listMaintRequests() {
@@ -42,10 +42,5 @@ public class MaintenanceInfo {
     public void listFacilityProblems() {
         for (String problem : FacilityProblems)
             System.out.println(problem);
-    }
-
-    // TODO This also ain't it
-    public void calcDownTime() {
-
     }
 }

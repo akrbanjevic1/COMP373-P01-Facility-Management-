@@ -24,6 +24,6 @@ public class InspectionInfo {
     }
 
     public void listInspections() {
-        this.InspectionsList.forEach((k,v) -> System.out.println("Inspection ID#: " + k + ", Name of facility: " + v));
+        this.InspectionsList.forEach((k,v) -> System.out.print("Inspection ID#" + k + ", Name of facility: " + v + "\n"));
     }
 }
