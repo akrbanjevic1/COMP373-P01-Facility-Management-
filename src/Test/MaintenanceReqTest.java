@@ -19,8 +19,8 @@ public class MaintenanceReqTest {
     void testGettingID() { assertEquals(18, maintenanceReqObject.getRequestID()); }
 
     @Test
-    void testGettingHoursWorked() { assertEquals(3.4, maintenanceReqObject.getHoursWorked());}
+    void testGettingHoursWorked() { assertEquals(3.4, maintenanceReqObject.getHoursWorked().doubleValue());}
 
     @Test
-    void testMCalculatingMaintCost() { assertEquals(211.05, maintenanceReqObject.calcMaintenanceCost(4.2)); }
+    void testCalculatingMaintCost() { assertEquals(211.05, maintenanceReqObject.calcMaintenanceCost(4.2).doubleValue()); }
 }
